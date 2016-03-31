@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+
+       <!-- <annotation-driven /> -->
+       <context:component-scan base-package="yang" />
+
+       <bean id="beanNameViewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">
+              <property name="order" value="1" />
+       </bean>
+
+       <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+              <property name="templateLoaderPath"><value></value></property>
+              <property name="defaultEncoding" value="UTF-8" />
+       </bean>
+
+       <bean id="freemarkerViewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+              <property name="order" value="2" />
+              <property name="cache"><value>true</value></property>
+              <property name="prefix" value="/view/"/>
+              <property name="suffix" value=".html"/>
+              <property name="contentType"><value>text/html; charset=utf-8</value></property>
+              <property name="exposeSpringMacroHelpers"><value>true</value></property>
+       </bean>
+
+</beans>
