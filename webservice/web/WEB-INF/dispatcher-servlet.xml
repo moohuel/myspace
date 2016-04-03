@@ -11,6 +11,9 @@
 		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.0.xsd">
 
        <!-- <annotation-driven /> -->
+       <mvc:default-servlet-handler/>
+       <mvc:annotation-driven/>
+
        <context:component-scan base-package="yang" />
 
        <bean id="beanNameViewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">

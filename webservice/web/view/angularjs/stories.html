@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Story">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+<script type="text/javascript" src="/js/angularjs/stories.js"></script>
+<br>
+
+<div ng-controller="MainCtrl as main">
+    <div>
+        Stories
+        <div ng-repeat="story in main.stories" ng-click="main.setCurrentStory(story)">
+            {{story.title}}<br>
+        </div>
+    </div>
+    <br><br>
+    <div>
+        <p>Story Detail</p>
+        TITLE : <input type="text" ng-model="main.currentStory.title"><br>
+        STATUS : <input type="text" ng-model="main.currentStory.status"><br>
+        TYPE : <input type="text" ng-model="main.currentStory.type"><br>
+        SPEAKER : <input type="text" ng-model="main.currentStory.speaker"><br>
+        DESC : <input type="text" ng-model="main.currentStory.desc"><br>
+    </div>
+</div>
+
+
+
+</body>
+</html>

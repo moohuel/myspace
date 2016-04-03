@@ -1,4 +1,4 @@
-package yang.controller;
+package yang.controller.hello;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +19,7 @@ public class HelloController {
         System.out.println("Hello");
 
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("hello");
+        mav.setViewName("hello/hello");
         return mav;
     }
 
@@ -29,7 +29,7 @@ public class HelloController {
         System.out.println("Hello");
 
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("helloJavascript");
+        mav.setViewName("hello/helloJavascript");
         return mav;
     }
 }
