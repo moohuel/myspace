@@ -1,15 +1,42 @@
 var storyModule = angular.module('Story', []);
 
 storyModule.controller('MainCtrl', function(StoryModel) {
+
+    console.log("MainCtr");
     //var maina = this;
     //main.stories = StoryModel.getStories();
     this.tempTitle = "haha";
     this.stories = StoryModel.getStories();
+    this.currentStory = null;
 
     this.setCurrentStory = function(story) {
         this.currentStory = story;
+        this.copiedStory = angular.copy(this.currentStory);
         this.tempTitle = "hoho";
     };
+
+    this.changeStory = function(story) {
+    };
+
+    this.insertStory = function(story) {
+        this.stories.push(story);
+    };
+
+    this.showStories = function() {
+        console.log(this.stories);
+    }
+
+});
+
+storyModule.controller('SubCtrl', function() {
+
+    console.log("SubCtrl");
+
+    this.subCtrlDesc = "This is subCtrl";
+
+    this.getSubCtrlDesc = function() {
+        return "This is getSubStrlDesc";
+    }
 });
 
 storyModule.service('StoryModel', function() {
@@ -42,3 +69,4 @@ storyModule.service('StoryModel', function() {
         return stories;
     };
 });
+
