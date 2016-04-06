@@ -1,4 +1,4 @@
-var storyModule = angular.module('Story', []);
+var storyModule = angular.module('Story', ['StorySecond']);
 
 storyModule.controller('MainCtrl', function(StoryModel) {
 

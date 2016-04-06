@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="routeTest">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
+<script type="text/javascript" src="/js/angularjs/route/routeTest.js"></script>
+
+<div ng-controller="MainCtrl as main">
+
+    <a href="/angularjs/route/routeTest">home</a><br><br>
+    <a href="#/route/dashboard">dashboard</a><br>
+    <a href="#/route/storyboard">storyboard</a><br>
+    <a href="#/route/otherSite">/route/otherSite</a>
+
+    <br><br>
+    <div ng-view=""></div>
+
+</div>
+
+
+
+</body>
+</html>

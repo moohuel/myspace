@@ -30,4 +30,13 @@ public class HelloAngularController {
         mav.setViewName("angularjs/helloAngular");
         return mav;
     }
+
+    @RequestMapping("/angularjs/route/routeTest")
+    public ModelAndView routeTest(Map<String, String> param) {
+
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("myName", "yangsook");
+        mav.setViewName("angularjs/route/routeTestHome");
+        return mav;
+    }
 }
