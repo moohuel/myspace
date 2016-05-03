@@ -9,4 +9,9 @@ public class Example
     {
         System.out.println("Hello Gradle");
     }
+
+    public void junitTest()
+    {
+
+    }
 }

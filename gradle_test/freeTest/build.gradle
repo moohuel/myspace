@@ -1,0 +1,11 @@
+task helloGradle << {
+    println "hello, gradle"
+}
+
+task hello << {
+    println "hello"
+}
+
+task world(dependsOn: [hello, helloGradle]) << {
+    println "world"
+}
