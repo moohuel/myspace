@@ -34,4 +34,11 @@
               <property name="exposeSpringMacroHelpers"><value>true</value></property>
        </bean>
 
+       <!-- 웹페이지(html)에 직접 접근을 하고 싶을 때 이것 설정 -->
+       <bean id="urlFilenameViewController" class="org.springframework.web.servlet.mvc.UrlFilenameViewController"  />
+       <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+              <property name="mappings"> <value>/**/*.html=urlFilenameViewController</value> </property>
+              <property name="order" value="2" />
+       </bean>
+
 </beans>
